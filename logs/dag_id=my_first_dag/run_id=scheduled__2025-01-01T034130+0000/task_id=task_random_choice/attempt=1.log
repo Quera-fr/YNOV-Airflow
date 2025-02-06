@@ -1,0 +1,3 @@
+[2025-02-06T09:28:04.897+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-06T09:28:04.919+0000] {taskinstance.py:2603} INFO - Dependencies not met for <TaskInstance: my_first_dag.task_random_choice scheduled__2025-01-01T03:41:30+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'task_bash'}
+[2025-02-06T09:28:04.924+0000] {local_task_job_runner.py:166} INFO - Task is not able to be run

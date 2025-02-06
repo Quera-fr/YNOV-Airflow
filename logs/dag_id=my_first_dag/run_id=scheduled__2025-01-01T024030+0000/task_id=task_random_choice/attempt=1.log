@@ -1,0 +1,4 @@
+[2025-02-06T09:15:34.315+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-06T09:15:34.330+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_first_dag.task_random_choice scheduled__2025-01-01T02:40:30+00:00 [queued]>
+[2025-02-06T09:15:34.344+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_first_dag.task_random_choice scheduled__2025-01-01T02:40:30+00:00 [queued]>
+[2025-02-06T09:15:34.344+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
