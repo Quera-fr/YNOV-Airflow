@@ -6,8 +6,18 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY utiles/ /root/airflow/dags/plugins/utiles/
+COPY dags/ dags/
 
-COPY Iris_DATA.db Iris_DATA.db
+COPY plugins/ plugins/
+
+COPY train.py .
+
+COPY airflow.db .
+
+ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+
+ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+
+RUN echo $AWS_SECRET_ACCESS_KEY
 
 CMD airflow standalone

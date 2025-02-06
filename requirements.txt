@@ -2,3 +2,5 @@ pandas
 scikit-learn
 SQLAlchemy
 apache-airflow
+mlflow
+boto3
