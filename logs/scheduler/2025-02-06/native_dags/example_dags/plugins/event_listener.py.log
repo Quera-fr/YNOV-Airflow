@@ -278,3 +278,13 @@
 [2025-02-06T13:06:10.179+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:06:10.178+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
 [2025-02-06T13:06:10.182+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
 [2025-02-06T13:06:10.208+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.037 seconds
+[2025-02-06T13:21:51.779+0000] {processor.py:186} INFO - Started process (PID=1191) to work on /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-02-06T13:21:51.780+0000] {processor.py:914} INFO - Processing file /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-02-06T13:21:51.782+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:21:51.782+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-02-06T13:21:51.784+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-02-06T13:21:51.803+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.028 seconds
+[2025-02-06T13:31:02.705+0000] {processor.py:186} INFO - Started process (PID=5145) to work on /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-02-06T13:31:02.706+0000] {processor.py:914} INFO - Processing file /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-02-06T13:31:02.708+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:31:02.708+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-02-06T13:31:02.710+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-02-06T13:31:02.729+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.028 seconds

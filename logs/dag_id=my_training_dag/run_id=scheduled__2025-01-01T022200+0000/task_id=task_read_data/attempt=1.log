@@ -1,0 +1,29 @@
+[2025-02-06T13:34:43.048+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-06T13:34:43.070+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_training_dag.task_read_data scheduled__2025-01-01T02:22:00+00:00 [queued]>
+[2025-02-06T13:34:43.086+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_training_dag.task_read_data scheduled__2025-01-01T02:22:00+00:00 [queued]>
+[2025-02-06T13:34:43.087+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-06T13:34:43.130+0000] {taskinstance.py:2889} INFO - Executing <Task(BranchPythonOperator): task_read_data> on 2025-01-01 02:22:00+00:00
+[2025-02-06T13:34:43.135+0000] {standard_task_runner.py:72} INFO - Started process 350 to run task
+[2025-02-06T13:34:43.138+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'my_training_dag', 'task_read_data', 'scheduled__2025-01-01T02:22:00+00:00', '--job-id', '3376', '--raw', '--subdir', 'DAGS_FOLDER/training_dag.py', '--cfg-path', '/tmp/tmpwb_henfw']
+[2025-02-06T13:34:43.139+0000] {standard_task_runner.py:105} INFO - Job 3376: Subtask task_read_data
+[2025-02-06T13:34:43.229+0000] {task_command.py:467} INFO - Running <TaskInstance: my_training_dag.task_read_data scheduled__2025-01-01T02:22:00+00:00 [running]> on host 280e83a6ee46
+[2025-02-06T13:34:43.358+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='my_training_dag' AIRFLOW_CTX_TASK_ID='task_read_data' AIRFLOW_CTX_EXECUTION_DATE='2025-01-01T02:22:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-01T02:22:00+00:00'
+[2025-02-06T13:34:43.360+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-06T13:34:43.361+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-06T13:34:43.361+0000] {logging_mixin.py:190} INFO - Current task name:task_read_data state:running start_date:2025-02-06 13:34:43.070811+00:00
+[2025-02-06T13:34:43.361+0000] {logging_mixin.py:190} INFO - Dag name:my_training_dag and current dag run status:running
+[2025-02-06T13:34:43.362+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-06T13:34:43.362+0000] {baseoperator.py:421} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2025-02-06T13:34:43.403+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-06T13:34:43.404+0000] {branch.py:38} INFO - Branch into None
+[2025-02-06T13:34:43.405+0000] {skipmixin.py:230} INFO - Following branch ()
+[2025-02-06T13:34:43.417+0000] {skipmixin.py:278} INFO - Skipping tasks [('task_train_model', -1)]
+[2025-02-06T13:34:43.468+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-06T13:34:43.469+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=my_training_dag, task_id=task_read_data, run_id=scheduled__2025-01-01T02:22:00+00:00, execution_date=20250101T022200, start_date=20250206T133443, end_date=20250206T133443
+[2025-02-06T13:34:43.505+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-06T13:34:43.506+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-06T13:34:43.507+0000] {logging_mixin.py:190} INFO - Dag name:my_training_dag queued_at:2025-02-06 13:34:26.163483+00:00
+[2025-02-06T13:34:43.508+0000] {logging_mixin.py:190} INFO - Task hostname:280e83a6ee46 operator:BranchPythonOperator
+[2025-02-06T13:34:43.514+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-06T13:34:43.533+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-06T13:34:43.535+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

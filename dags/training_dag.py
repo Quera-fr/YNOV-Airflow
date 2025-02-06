@@ -1,19 +1,21 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator, BranchPythonOperator
+from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
 
 import pandas as pd
-from sklearn.datasets import load_iris
 import sqlalchemy as db
 from utiles.functions import *
 
-def load_data():
-    data = load_iris()
-    df = pd.DataFrame(data.data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
+import random
+from sklearn.datasets import load_iris
 
-def insert_data_to_db():
-    # Création de la table IRIS DATA
+def insert_data():
+    df = load_iris()
+    df = pd.DataFrame(df.data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
+
     data = DataBaseV2(db_name='Iris_DATA', db_type='sqlite')
+    
     data.create_table('iris_data', 
                     id_columns=db.Integer, 
                     sepal_length=db.Float, 
@@ -21,11 +23,10 @@ def insert_data_to_db():
                     petal_length=db.Float,
                     petal_width=db.Float)
 
-
     # Injection dans la base de données
-    n_lines = len(data.dataframe('iris_data'))
+    n_lines = random.randint(0, len(df)-10)
 
-    for n in range(n_lines, n_lines+5):
+    for n in range(n_lines, n_lines+10):
         data_value = df.iloc[n]
         data.insert_row('iris_data',
                         id_columns=n,
@@ -33,18 +34,32 @@ def insert_data_to_db():
                         sepal_width = data_value.sepal_width,
                         petal_length = data_value.petal_length,
                         petal_width = data_value.petal_width)
+        
 
+def read_data():
+    data = DataBaseV2(db_name='Iris_DATA', db_type='sqlite')
+    n_lines = len(data.dataframe('iris_data'))
+
+    if n_lines%100==0:
+        return 'task_train_model'
 
 
 with DAG(
     "my_training_dag",
     start_date=datetime(2025, 1, 1),
-    schedule_interval="@once"):
+    schedule_interval=timedelta(seconds=30)):
 
-    task_load_data = PythonOperator(task_id="task_load_data", 
-                                    python_callable=load_data)
+    task_insert_data = PythonOperator(
+        task_id="task_insert_data",
+        python_callable=insert_data,
+    )
 
-    task_insert_data_to_db = PythonOperator(task_id="task_insert_data_to_db", 
-                                            python_callable=insert_data_to_db)
-
-    task_load_data >> task_insert_data_to_db
+    task_read_data = BranchPythonOperator(
+        task_id="task_read_data",
+        python_callable=read_data)
+    
+    task_train_model = BashOperator(
+        task_id="task_train_model",
+        bash_command="python training.py",)
+    
+    task_insert_data >> task_read_data >> task_train_model

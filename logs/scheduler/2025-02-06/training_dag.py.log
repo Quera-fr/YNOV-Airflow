@@ -279,3 +279,72 @@ ModuleNotFoundError: No module named 'utiles'
 [2025-02-06T13:06:14.641+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:06:14.640+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-02-06T13:06:14.662+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:06:14.662+0000] {dag.py:4180} INFO - Setting next_dagrun for my_training_dag to None, run_after=None
 [2025-02-06T13:06:14.730+0000] {processor.py:208} INFO - Processing /root/airflow/dags/training_dag.py took 0.839 seconds
+[2025-02-06T13:18:12.222+0000] {processor.py:186} INFO - Started process (PID=74) to work on /root/airflow/dags/training_dag.py
+[2025-02-06T13:18:12.224+0000] {processor.py:914} INFO - Processing file /root/airflow/dags/training_dag.py for tasks to queue
+[2025-02-06T13:18:12.226+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:18:12.225+0000] {dagbag.py:588} INFO - Filling up the DagBag from /root/airflow/dags/training_dag.py
+[2025-02-06T13:18:12.818+0000] {processor.py:925} INFO - DAG(s) 'my_training_dag' retrieved from /root/airflow/dags/training_dag.py
+[2025-02-06T13:18:13.090+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:18:13.089+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:18:13.113+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:18:13.113+0000] {dag.py:4180} INFO - Setting next_dagrun for my_training_dag to None, run_after=None
+[2025-02-06T13:18:13.171+0000] {processor.py:208} INFO - Processing /root/airflow/dags/training_dag.py took 0.956 seconds
+[2025-02-06T13:21:57.913+0000] {processor.py:186} INFO - Started process (PID=1231) to work on /root/airflow/dags/training_dag.py
+[2025-02-06T13:21:57.914+0000] {processor.py:914} INFO - Processing file /root/airflow/dags/training_dag.py for tasks to queue
+[2025-02-06T13:21:57.919+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:21:57.916+0000] {dagbag.py:588} INFO - Filling up the DagBag from /root/airflow/dags/training_dag.py
+[2025-02-06T13:21:58.969+0000] {processor.py:925} INFO - DAG(s) 'my_training_dag' retrieved from /root/airflow/dags/training_dag.py
+[2025-02-06T13:21:59.097+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:21:59.096+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:21:59.116+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:21:59.116+0000] {dag.py:4180} INFO - Setting next_dagrun for my_training_dag to 2025-01-01 01:46:00+00:00, run_after=2025-01-01 01:46:30+00:00
+[2025-02-06T13:21:59.186+0000] {processor.py:208} INFO - Processing /root/airflow/dags/training_dag.py took 1.280 seconds
+[2025-02-06T13:23:14.425+0000] {processor.py:186} INFO - Started process (PID=1794) to work on /root/airflow/dags/training_dag.py
+[2025-02-06T13:23:14.426+0000] {processor.py:914} INFO - Processing file /root/airflow/dags/training_dag.py for tasks to queue
+[2025-02-06T13:23:14.430+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:23:14.430+0000] {dagbag.py:588} INFO - Filling up the DagBag from /root/airflow/dags/training_dag.py
+[2025-02-06T13:23:15.048+0000] {processor.py:925} INFO - DAG(s) 'my_training_dag' retrieved from /root/airflow/dags/training_dag.py
+[2025-02-06T13:23:15.063+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:23:15.062+0000] {taskinstance.py:3313} ERROR - {'DAG Id': 'my_training_dag', 'Task Id': 'task_insert_data', 'Run Id': 'scheduled__2025-01-01T01:50:30+00:00', 'Hostname': 'cbb1459a86bc'}
+[2025-02-06T13:23:15.093+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-06T13:23:15.093+0000] {logging_mixin.py:190} INFO - Task start:2025-02-06 13:23:12.730908+00:00 end:2025-02-06 13:23:15.072469+00:00 duration:2.341561
+[2025-02-06T13:23:15.094+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): task_insert_data> dag:<DAG: my_training_dag> dagrun:<DagRun my_training_dag @ 2025-01-01 01:50:30+00:00: scheduled__2025-01-01T01:50:30+00:00, state:running, queued_at: 2025-02-06 13:23:07.064805+00:00. externally triggered: False>
+[2025-02-06T13:23:15.094+0000] {logging_mixin.py:190} INFO - Failure caused by {'DAG Id': 'my_training_dag', 'Task Id': 'task_insert_data', 'Run Id': 'scheduled__2025-01-01T01:50:30+00:00', 'Hostname': 'cbb1459a86bc'}
+[2025-02-06T13:23:15.094+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:23:15.094+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=my_training_dag, task_id=task_insert_data, run_id=scheduled__2025-01-01T01:50:30+00:00, execution_date=20250101T015030, start_date=20250206T132312, end_date=20250206T132315
+[2025-02-06T13:23:15.133+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:23:15.133+0000] {processor.py:876} INFO - Executed callback for <TaskInstance: my_training_dag.task_insert_data scheduled__2025-01-01T01:50:30+00:00 [failed]> in state failed
+[2025-02-06T13:23:15.150+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:23:15.150+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:23:15.170+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:23:15.170+0000] {dag.py:4180} INFO - Setting next_dagrun for my_training_dag to 2025-01-01 01:51:00+00:00, run_after=2025-01-01 01:51:30+00:00
+[2025-02-06T13:23:15.286+0000] {processor.py:208} INFO - Processing /root/airflow/dags/training_dag.py took 0.869 seconds
+[2025-02-06T13:26:26.455+0000] {processor.py:186} INFO - Started process (PID=3200) to work on /root/airflow/dags/training_dag.py
+[2025-02-06T13:26:26.456+0000] {processor.py:914} INFO - Processing file /root/airflow/dags/training_dag.py for tasks to queue
+[2025-02-06T13:26:26.458+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:26:26.457+0000] {dagbag.py:588} INFO - Filling up the DagBag from /root/airflow/dags/training_dag.py
+[2025-02-06T13:26:27.050+0000] {processor.py:925} INFO - DAG(s) 'my_training_dag' retrieved from /root/airflow/dags/training_dag.py
+[2025-02-06T13:26:27.069+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:26:27.068+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:26:27.091+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:26:27.090+0000] {dag.py:4180} INFO - Setting next_dagrun for my_training_dag to 2025-01-01 02:03:00+00:00, run_after=2025-01-01 02:03:30+00:00
+[2025-02-06T13:26:27.145+0000] {processor.py:208} INFO - Processing /root/airflow/dags/training_dag.py took 0.694 seconds
+[2025-02-06T13:31:12.466+0000] {processor.py:186} INFO - Started process (PID=5230) to work on /root/airflow/dags/training_dag.py
+[2025-02-06T13:31:12.467+0000] {processor.py:914} INFO - Processing file /root/airflow/dags/training_dag.py for tasks to queue
+[2025-02-06T13:31:12.469+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:31:12.469+0000] {dagbag.py:588} INFO - Filling up the DagBag from /root/airflow/dags/training_dag.py
+[2025-02-06T13:31:13.092+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:31:13.085+0000] {dagbag.py:387} ERROR - Failed to import: /root/airflow/dags/training_dag.py
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/airflow/dags/training_dag.py", line 57, in <module>
+    task_read_data = BranchPythonOperator(
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 506, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/airflow/operators/python.py", line 222, in __init__
+    super().__init__(**kwargs)
+  File "/opt/conda/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 506, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 975, in __init__
+    task_group.add(self)
+  File "/opt/conda/lib/python3.12/site-packages/airflow/utils/task_group.py", line 256, in add
+    raise DuplicateTaskIdFound(f"{node_type} id '{key}' has already been added to the DAG")
+airflow.exceptions.DuplicateTaskIdFound: Task id 'task_insert_data' has already been added to the DAG
+[2025-02-06T13:31:13.093+0000] {processor.py:927} WARNING - No viable dags retrieved from /root/airflow/dags/training_dag.py
+[2025-02-06T13:31:13.138+0000] {processor.py:208} INFO - Processing /root/airflow/dags/training_dag.py took 0.676 seconds
+[2025-02-06T13:34:01.321+0000] {processor.py:186} INFO - Started process (PID=74) to work on /root/airflow/dags/training_dag.py
+[2025-02-06T13:34:01.323+0000] {processor.py:914} INFO - Processing file /root/airflow/dags/training_dag.py for tasks to queue
+[2025-02-06T13:34:01.325+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:34:01.325+0000] {dagbag.py:588} INFO - Filling up the DagBag from /root/airflow/dags/training_dag.py
+[2025-02-06T13:34:02.043+0000] {processor.py:925} INFO - DAG(s) 'my_training_dag' retrieved from /root/airflow/dags/training_dag.py
+[2025-02-06T13:34:02.432+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:34:02.431+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:34:02.476+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:34:02.476+0000] {dag.py:4180} INFO - Setting next_dagrun for my_training_dag to 2025-01-01 02:21:00+00:00, run_after=2025-01-01 02:21:30+00:00
+[2025-02-06T13:34:02.567+0000] {processor.py:208} INFO - Processing /root/airflow/dags/training_dag.py took 1.252 seconds

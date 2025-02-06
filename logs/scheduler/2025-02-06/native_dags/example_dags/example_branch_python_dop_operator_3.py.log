@@ -321,3 +321,31 @@
 [2025-02-06T13:05:33.506+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:05:33.506+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-02-06T13:05:33.532+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:05:33.531+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2025-02-06 13:04:00+00:00, run_after=2025-02-06 13:05:00+00:00
 [2025-02-06T13:05:33.584+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.117 seconds
+[2025-02-06T13:20:46.428+0000] {processor.py:186} INFO - Started process (PID=844) to work on /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:20:46.429+0000] {processor.py:914} INFO - Processing file /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2025-02-06T13:20:46.431+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:20:46.430+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:20:46.442+0000] {processor.py:925} INFO - DAG(s) 'example_branch_dop_operator_v3' retrieved from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:20:46.462+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:20:46.462+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:20:46.485+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:20:46.485+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2025-02-06 13:19:00+00:00, run_after=2025-02-06 13:20:00+00:00
+[2025-02-06T13:20:46.555+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.130 seconds
+[2025-02-06T13:25:17.606+0000] {processor.py:186} INFO - Started process (PID=2670) to work on /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:25:17.607+0000] {processor.py:914} INFO - Processing file /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2025-02-06T13:25:17.610+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:25:17.610+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:25:17.618+0000] {processor.py:925} INFO - DAG(s) 'example_branch_dop_operator_v3' retrieved from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:25:17.639+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:25:17.639+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:25:17.661+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:25:17.660+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2025-02-06 13:24:00+00:00, run_after=2025-02-06 13:25:00+00:00
+[2025-02-06T13:25:17.729+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.128 seconds
+[2025-02-06T13:29:44.699+0000] {processor.py:186} INFO - Started process (PID=4613) to work on /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:29:44.700+0000] {processor.py:914} INFO - Processing file /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2025-02-06T13:29:44.703+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:29:44.702+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:29:44.712+0000] {processor.py:925} INFO - DAG(s) 'example_branch_dop_operator_v3' retrieved from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:29:44.735+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:29:44.734+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:29:44.760+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:29:44.760+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2025-02-06 13:28:00+00:00, run_after=2025-02-06 13:29:00+00:00
+[2025-02-06T13:29:44.815+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.121 seconds
+[2025-02-06T13:33:14.734+0000] {processor.py:186} INFO - Started process (PID=5859) to work on /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:33:14.735+0000] {processor.py:914} INFO - Processing file /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2025-02-06T13:33:14.736+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:33:14.736+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:33:14.744+0000] {processor.py:925} INFO - DAG(s) 'example_branch_dop_operator_v3' retrieved from /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2025-02-06T13:33:14.766+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:33:14.766+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-06T13:33:14.791+0000] {logging_mixin.py:190} INFO - [2025-02-06T13:33:14.791+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2025-02-06 13:32:00+00:00, run_after=2025-02-06 13:33:00+00:00
+[2025-02-06T13:33:14.846+0000] {processor.py:208} INFO - Processing /opt/conda/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.118 seconds
